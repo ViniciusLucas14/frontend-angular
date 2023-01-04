@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TabsRoutingModule } from './tabs-routing.module';
+import { CartRoutingModule } from './cart-routing.module';
 import { IonicModule } from '@ionic/angular';
-import { TabsComponent } from './tabs.component';
+import { CartComponent } from './cart.component';
 
 
 @NgModule({
   declarations: [
-    TabsComponent,
+    CartComponent,
   ],
   imports: [
     CommonModule,
-    TabsRoutingModule,
+    CartRoutingModule,
     IonicModule,
   ]
 })
-export class TabsModule { }
+export class CartModule { }
