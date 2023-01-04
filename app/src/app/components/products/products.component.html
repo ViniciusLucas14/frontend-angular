@@ -1,1 +1,15 @@
-<p>products works!</p>
+<div class="container">
+    <ion-card class="card" *ngFor="let product of product$ | async">
+        <div class="div-img">
+            <img alt="Product: {{product.name}}" src="{{product.imageUrl}}" class="img" />
+        </div>
+        <ion-card-header>
+            <ion-card-title>{{product.name}}</ion-card-title>
+            <ion-card-subtitle> {{product.description}} </ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content class="content-price">
+            {{product.price}}
+        </ion-card-content>
+    </ion-card>
+</div>
