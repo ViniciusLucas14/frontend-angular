@@ -1,13 +1,12 @@
 <ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home">
+  <ion-tab-bar slot="bottom" [hidden]="true">
+    <ion-tab-button id="home" tab="home">
       <ion-label>Home</ion-label>
       <ion-icon name="home-outline"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button tab="cart">
+    <ion-tab-button id="cart" tab="cart">
       <ion-label>Carrinho</ion-label>
       <ion-icon name="cart-outline"></ion-icon>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
-
