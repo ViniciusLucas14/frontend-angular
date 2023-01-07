@@ -6,13 +6,15 @@ import { ProductsComponent } from './products/products.component';
 import { HeaderComponent } from './header/header.component';
 import { BannerSwiperComponent } from './banner-swiper/banner-swiper.component';
 import { SwiperModule } from 'swiper/angular';
+import { SubHeaderComponent } from './sub-header/sub-header.component';
 
 
 @NgModule({
   declarations: [
     ProductsComponent,
     HeaderComponent,
-    BannerSwiperComponent
+    BannerSwiperComponent,
+    SubHeaderComponent
   ],
   imports: [
     CommonModule,

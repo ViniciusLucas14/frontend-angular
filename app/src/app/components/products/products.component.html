@@ -1,15 +1,21 @@
 <div class="container">
-    <ion-card class="card" *ngFor="let product of product$ | async">
-        <div class="div-img">
-            <img alt="Product: {{product.name}}" src="{{product.imageUrl}}" class="img" />
-        </div>
-        <ion-card-header>
-            <ion-card-title>{{product.name}}</ion-card-title>
-            <ion-card-subtitle> {{product.description}} </ion-card-subtitle>
-        </ion-card-header>
+    <ion-grid>
+        <ion-row>
+            <ion-col sizeLg="3" sizeMd="4" sizeXs="4" *ngFor="let product of product$ | async">
+                <ion-card class="card" (click)="clickProductCard(product.name, product.id)">
+                    <div class="div-img">
+                        <img alt="Product: {{product.name}}" src="{{product.imageUrl}}" class="img" />
+                    </div>
+                    <ion-card-header>
+                        <ion-card-title class="name">{{product.name}}</ion-card-title>
+                        <ion-card-subtitle> {{product.description}} </ion-card-subtitle>
+                    </ion-card-header>
 
-        <ion-card-content class="content-price">
-            {{product.price}}
-        </ion-card-content>
-    </ion-card>
+                    <ion-card-content class="content-price price">
+                        {{configurationService.moneyBrasil(product.price)}}
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </div>
