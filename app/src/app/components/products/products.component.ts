@@ -6,7 +6,7 @@ import { ConfigurationService } from 'src/app/services/configuration/configurati
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-products',
+  selector: 'all-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })

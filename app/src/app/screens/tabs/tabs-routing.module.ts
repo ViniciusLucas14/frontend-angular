@@ -27,8 +27,17 @@ const routes: Routes = [
         ],
       },
       {
+        path: 'shop',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../products/products.module').then(m => m.ProductsModule)
+          }
+        ]
+      },
+      {
         path: '',
-        redirectTo: '/home',
+        redirectTo: 'home',
         pathMatch: 'full'
       }
     ]
